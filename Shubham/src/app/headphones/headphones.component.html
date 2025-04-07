@@ -1,0 +1,13 @@
+<div class="container">
+    <h2 class="title">Headphones List</h2>
+  
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let headphone of headphones">
+        <img [src]="headphone.image" [alt]="headphone.name" />
+        <h3>{{ headphone.name }}</h3>
+        <p><strong>Price:</strong> {{ headphone.price }}</p>
+        <p><strong>Features:</strong> {{ headphone.features }}</p>
+      </div>
+    </div>
+  </div>
+  

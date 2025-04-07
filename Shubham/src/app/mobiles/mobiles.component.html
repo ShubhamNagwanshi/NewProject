@@ -1,0 +1,16 @@
+<div class="container">
+    <!-- Button to Show/Hide Mobile List -->
+    <button class="toggle-button" (click)="showMobiles()">
+        {{ isMobileListVisible ? 'Hide Mobiles' : 'Show Mobiles' }}
+    </button>
+
+    <!-- Mobile List Grid (Visible Only if List is Enabled) -->
+    <div *ngIf="isMobileListVisible" class="mobile-grid">
+        <div class="mobile-card" *ngFor="let mobile of mobiles">
+            <img [src]="mobile.image" [alt]="mobile.name" />
+            <h3>{{ mobile.name }}</h3>
+            <p><strong>Price:</strong> {{ mobile.price }}</p>
+            <p><strong>Features:</strong> {{ mobile.features }}</p>
+        </div>
+    </div>
+</div>

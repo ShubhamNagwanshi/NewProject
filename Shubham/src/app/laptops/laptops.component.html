@@ -1,0 +1,13 @@
+<div class="container">
+    <h2 class="title">Laptops List</h2>
+  
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let laptop of laptops">
+        <img [src]="laptop.image" [alt]="laptop.name" />
+        <h3>{{ laptop.name }}</h3>
+        <p><strong>Price:</strong> {{ laptop.price }}</p>
+        <p><strong>Features:</strong> {{ laptop.features }}</p>
+      </div>
+    </div>
+  </div>
+  

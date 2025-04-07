@@ -1,0 +1,13 @@
+<div *ngIf="noProducts" class="no-products">
+    <p>No products found for category: {{ category }}</p>
+  </div>
+  
+  <div *ngIf="!noProducts">
+    <div *ngFor="let product of products" class="product-card">
+      <img [src]="product.image" alt="{{ product.name }}">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.features }}</p>
+      <p>Price: ${{ product.price }}</p>
+    </div>
+  </div>
+  

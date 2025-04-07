@@ -1,0 +1,60 @@
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <h2 class="logo">ElectroMart</h2>
+
+    <div class="nav-right">
+        <button class="btn-login" routerLink="/login">Login</button>
+
+        <div class="cart-container">
+            <a routerLink="/cart">
+                <img src="assets/cart.jpg" class="cart-icon" alt="Cart">
+                <span class="cart-count">3</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- Background Container with Dynamic Image -->
+<div class="background-container" [ngStyle]="{'background-image': 'url(' + currentBackground + ')'}">
+    <div class="content">
+
+        <!-- 🔍 Search Box -->
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search for products, brands & more...">
+            <button class="search-button">🔍</button>
+        </div>
+
+        <!-- Product Categories -->
+        <div class="products-section">
+            <h2>Explore Our Categories</h2>
+            <div class="product-cards">
+                <div class="product-card" 
+                    (mouseenter)="changeBackground('mobiles')" 
+                    (mouseleave)="resetBackground()">
+                    <a routerLink="/mobiles">
+                        <img src="assets/cellphone.jpg" alt="Mobile Phones">
+                        <h3>Mobile Phones</h3>
+                    </a>
+                </div>
+
+                <div class="product-card" 
+                    (mouseenter)="changeBackground('laptops')" 
+                    (mouseleave)="resetBackground()">
+                    <a routerLink="/laptops">
+                        <img src="assets/laptopImage2.jpg" alt="Laptops">
+                        <h3>Laptops</h3>
+                    </a>
+                </div>
+
+                <div class="product-card" 
+                    (mouseenter)="changeBackground('headphones')" 
+                    (mouseleave)="resetBackground()">
+                    <a routerLink="/headphones">
+                        <img src="assets/headphone.jpg" alt="Headphones">
+                        <h3>Headphones</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
